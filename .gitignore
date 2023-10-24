@@ -1,0 +1,11 @@
+# python cache
+__pycache__
+
+# dataset folder
+data/
+
+# checkpoint folder
+checkpoints/
+
+# output file
+*.out
