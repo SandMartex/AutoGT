@@ -83,8 +83,8 @@ def initial_args():
     parser.add_argument('--weight_decay', type=float, default=0.01)
     parser.add_argument('--attention_dropout_rate',type=float, default=0.1)
     parser.add_argument('--checkpoint_path', type=str, default='')
-    parser.add_argument('--warmup_updates', type=int, default=6)
-    parser.add_argument('--tot_updates', type=int, default=50)
+    parser.add_argument('--warmup_updates', type=int, default=600)
+    parser.add_argument('--tot_updates', type=int, default=5000)
     parser.add_argument('--peak_lr', type=float, default=2e-4)
     parser.add_argument('--end_lr', type=float, default=1e-9)
     parser.add_argument('--edge_type', type=str, default='multi_hop')
@@ -105,9 +105,9 @@ def initial_args():
 
     parser = parent_parser.add_argument_group("Training")
     parser.add_argument('--epochs', type=int, default=500)
-    parser.add_argument('--split_epochs', type=int, default=2)
-    parser.add_argument('--end_epochs', type=int, default=4)
-    parser.add_argument('--retrain_epochs', type=int, default=4)
+    parser.add_argument('--split_epochs', type=int, default=60)
+    parser.add_argument('--end_epochs', type=int, default=200)
+    parser.add_argument('--retrain_epochs', type=int, default=200)
 
     parser = parent_parser.add_argument_group("Evolution")
     parser.add_argument('--evol_epochs', type=int, default=20)
